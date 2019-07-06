@@ -1,0 +1,92 @@
+/* Random colour generator */
+
+.container{
+    width: 100%;
+    padding: 70px;
+}
+.red{
+    background-color: red;
+}
+.yellow{
+    background-color: yellow;
+}
+.blue{
+    background-color: blue;
+}
+.green{
+    background-color: green;
+}
+.colourDiv{
+    height: 100px;
+    width: 100px;
+    border: solid 1px black;
+    margin: 20px;
+}
+
+/* Star1 */
+
+.starsForm{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: flex;
+}
+.fundingStarContainer{
+    display: flex;
+    margin: 0;
+    transform: translate(-50%, -50%) rotateY(180deg);
+    border: 1px solid black;
+}
+.star{
+    display: none;
+}
+
+.starsForm label{
+    display: block;
+    cursor: pointer;
+    width: 50px;
+}
+.starsForm label:before{
+    content: '\f005';
+    font-family: fontAwesome;
+    position: relative;
+    display: block;
+    font-size: 50px;
+    color: #e6e6e6;
+}
+.starsForm label:after{
+    content: '\f005';
+    font-family: fontAwesome;
+    position: absolute;
+    display: block;
+    font-size: 50px;
+    color: #ffd11a;
+    top: 0;
+    opacity: 0;
+    transition: .5s;
+    text-shadow: 0 2px 5px rgba(0,0,0,.5);
+}
+.starsForm label:hover:after,
+.starsForm label:hover ~ label:after,
+.starsForm input:checked ~ label:after{
+    opacity: 1;
+}
+
+/* Star2 */
+
+.con{
+    height: 60px;
+    width: 330px;
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.fa-star{
+    font-size: 200px;
+    color: #e6e6e6;
+    cursor: pointer;
+}

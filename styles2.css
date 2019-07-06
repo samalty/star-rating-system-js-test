@@ -1,0 +1,71 @@
+.container{
+    height: 300px;
+}
+
+.starsForm{
+    position: absolute;
+    display: flexbox;
+}
+/*
+.fundingStarContainer{
+    display: flex;
+    margin: 0;
+    border: 1px solid black;
+}
+*/
+.starRadio{
+    display: none;
+}
+.starsForm label{
+    display: flexbox;
+    cursor: pointer;
+    width: 50px;
+    position: relative;
+    font-size: 45px;
+    color: #e6e6e6;
+    text-shadow: 0 2px 5px rgba(0,0,0,.5);
+}
+.fieldset{
+    width: 100%;
+    display: flexbox;
+    border: none;
+}
+
+.emptyStars,
+.fullStars,
+.halfStars{
+    position: absolute;
+    padding: 10px;
+    height: 100px;
+}
+
+#emptyStar1,
+#emptyStar2,
+#emptyStar3,
+#emptyStar4,
+#emptyStar5{
+    color: #e6e6e6;
+    font-size: 60px;
+    text-shadow: 0 2px 5px rgba(0,0,0,.5);
+}
+#halfStar1,
+#halfStar2,
+#halfStar3,
+#halfStar4,
+#halfStar5{
+    font-size: 60px;
+    color: #ffd11a;
+    text-shadow: 0 2px 5px rgba(0,0,0,.5);
+}
+#fullStar1,
+#fullStar2,
+#fullStar3,
+#fullStar4,
+#fullStar5{
+    font-size: 60px;
+    color: #ffd11a;
+    text-shadow: 0 2px 5px rgba(0,0,0,.5);
+}
+.disappear{
+    display: none;
+}

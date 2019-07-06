@@ -1,0 +1,159 @@
+    <head>
+        <meta charset="utf-8">
+        <title>Home</title>
+        <link rel="stylesheet" href="styles2.css">
+        <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+        <!--<script src="custom.js" charset="utf-8"></script>-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <style>
+            .disappear{
+                display: none;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <form name="stars" class="starsForm" onsubmit="return ratings()">
+                <fieldset class="fieldset">
+                    <legend>Funding</legend>
+                    <input type="radio" name="fundingStar" id="fstar1" class="starRadio" value="1">
+                    <label for="fstar1" class="stars">
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                    </label>
+                    <input type="radio" name="fundingStar" id="fstar2" class="starRadio" value="2">
+                    <label for="fstar2" class="stars">
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                    </label>
+                    <input type="radio" name="fundingStar" id="fstar3" class="starRadio" value="3">
+                    <label for="fstar3" class="stars">
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                    </label>
+                    <input type="radio" name="fundingStar" id="fstar4" class="starRadio" value="4">
+                    <label for="fstar4" class="stars">
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                    </label>
+                    <input type="radio" name="fundingStar" id="fstar5" class="starRadio" value="5">
+                    <label for="fstar5" class="stars">
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                    </label>
+                </fieldset>
+                <fieldset class="fieldset">
+                    <legend>Mentoring</legend>
+                    <input type="radio" name="mentoringStar" id="mstar1" class="starRadio" value="1">
+                    <label for="mstar1" class="stars">
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                    </label>
+                    <input type="radio" name="mentoringStar" id="mstar2" class="starRadio" value="2">
+                    <label for="mstar2" class="stars">
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                    </label>
+                    <input type="radio" name="mentoringStar" id="mstar3" class="starRadio" value="3">
+                    <label for="mstar3" class="stars">
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                    </label>
+                    <input type="radio" name="mentoringStar" id="mstar4" class="starRadio" value="4">
+                    <label for="mstar4" class="stars">
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                    </label>
+                    <input type="radio" name="mentoringStar" id="mstar5" class="starRadio" value="5">
+                    <label for="mstar5" class="stars">
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                    </label>
+                </fieldset>
+                <fieldset class="fieldset">
+                    <legend>Other</legend>
+                    <input type="radio" name="otherStar" id="ostar1" class="starRadio" value="1">
+                    <label for="ostar1" class="stars">
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                    </label>
+                    <input type="radio" name="otherStar" id="ostar2" class="starRadio" value="2">
+                    <label for="ostar2" class="stars">
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                    </label>
+                    <input type="radio" name="otherStar" id="ostar3" class="starRadio" value="3">
+                    <label for="ostar3" class="stars">
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                    </label>
+                    <input type="radio" name="otherStar" id="ostar4" class="starRadio" value="4">
+                    <label for="ostar4" class="stars">
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                    </label>
+                    <input type="radio" name="otherStar" id="ostar5" class="starRadio" value="5">
+                    <label for="ostar5" class="stars">
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                    </label>
+                </fieldset>
+                <input type="submit" class="submit" value="submit">
+            </form>
+        </div>
+        <div class="emptyStars">
+            <i class="fa fa-star" id="emptyStar1"></i>
+            <i class="fa fa-star" id="emptyStar2"></i>
+            <i class="fa fa-star" id="emptyStar3"></i>
+            <i class="fa fa-star" id="emptyStar4"></i>
+            <i class="fa fa-star" id="emptyStar5"></i>
+        </div>
+        <div class="halfStars">
+            <i class="fas fa-star-half" id="halfStar1"></i>
+            <i class="fas fa-star-half" id="halfStar2"></i>
+            <i class="fas fa-star-half" id="halfStar3"></i>
+            <i class="fas fa-star-half" id="halfStar4"></i>
+            <i class="fas fa-star-half" id="halfStar5"></i>
+        </div>
+        <div class="fullStars">
+            <i class="fa fa-star" id="fullStar1"></i>
+            <i class="fa fa-star" id="fullStar2"></i>
+            <i class="fa fa-star" id="fullStar3"></i>
+            <i class="fa fa-star" id="fullStar4"></i>
+            <i class="fa fa-star" id="fullStar5"></i>
+        </div>
+    </body>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $(".stars").click(function(){
+                $(this).css("color", "#ffd11a");
+                $(this).prevAll("label").css("color", "#ffd11a")
+                $(this).nextAll("label").css("color", "#e6e6e6");
+            });
+        });
+        
+        function ratings(){
+            
+            var x = document.forms["stars"]["fundingStar"].value;
+            var y = document.forms["stars"]["mentoringStar"].value;
+            var z = document.forms["stars"]["otherStar"].value;
+            var o = (Math.abs(x) + Math.abs(y) + Math.abs(z)) / 3;
+            
+            console.log("You have given X a rating of " + x + " for funding.");
+            console.log("You have given X a rating of " + y + " for mentoring.");
+            console.log("You have given X a rating of " + z + " for other.");
+            console.log(o);
+            
+            if (o < 1.25) {
+                document.getElementById('halfStar2').classList.add('disappear');
+            } 
+            if (o < 1.75) {
+                document.getElementById('fullStar2').classList.add('disappear');
+            } 
+            if (o < 2.25) {
+                document.getElementById('halfStar3').classList.add('disappear');
+            } 
+            if (o < 2.75) {
+                document.getElementById('fullStar3').classList.add('disappear');
+            } 
+            if (o < 3.25) {
+                document.getElementById('halfStar4').classList.add('disappear');
+            } 
+            if (o < 3.75) {
+                document.getElementById('fullStar4').classList.add('disappear');
+            } 
+            if (o < 4.25) {
+                document.getElementById('halfStar5').classList.add('disappear');
+            } 
+            if (o < 4.75) {
+                document.getElementById('fullStar5').classList.add('disappear');
+            }
+        }
+    </script>
+</html>
